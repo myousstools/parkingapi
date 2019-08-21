@@ -1,0 +1,2447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e0bb945b-cd7b-4758-a0d0-805b2b6f2568" created="2.8.0" activeEnvironment="Default environment" name="ParkingAPI" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="2af8a264-2f00-4906-85e6-56825e658227" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8585</con:endpoint>
+    </con:endpoints>
+    <con:resource name="/slot/assignSlot" path="/slot/assignSlot" id="ae2446a4-8b73-4323-81a6-0cb5d892f91e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="2a366421-d289-4ab1-b11c-94d09844b66f" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:ass="http://localhost/slot/assignSlot">ass:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ass="http://localhost/slot/assignSlot">ass:Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="6bbc5303-1848-4d3d-9194-e548745cfdd3" wadlVersion="http://wadl.dev.java.net/2009/02" name="Service 2" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="Resource" path="" id="624f2ce8-9e2f-4917-bc6d-c0aefbed22a1">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="Copy of /slot/assignSlot" path="/slot/releaseSlot" id="ae2446a4-8b73-4323-81a6-0cb5d892f91e">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="POST" id="2a366421-d289-4ab1-b11c-94d09844b66f" method="POST">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+            <con:status>400</con:status>
+            <con:params/>
+            <con:element xmlns:ass="http://localhost/slot/assignSlot">ass:Fault</con:element>
+          </con:representation>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType xsi:nil="true"/>
+            <con:status>400</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ass="http://localhost/slot/assignSlot">ass:Response</con:element>
+          </con:representation>
+          <con:request name="POST Request" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="98737803-cc2b-410b-8f4e-f51cbe4b6b1a" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 2" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="/slot/releaseSlot" path="/slot/releaseSlot" id="c7248dcf-abbb-4dca-9139-f603f80b8663">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="a5b4bde8-6874-4b7d-9175-571232f714cc" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:rel="http://localhost/slot/releaseSlot">rel:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:rel="http://localhost/slot/releaseSlot">rel:Response</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="bf378f67-8b81-4310-bc30-df69cc93c1ff" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="8bcf7fce-a556-46ac-8736-c1237c557d07" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 3" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="/billing/pay" path="/billing/pay" id="d60acd31-f620-4d38-8270-ab95a6ed7494">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="d34a0840-317a-4eef-af1c-cfd4da5a0460" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>500 400</con:status>
+          <con:params/>
+          <con:element xmlns:pay="http://localhost/billing/pay">pay:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:pay="http://localhost/billing/pay">pay:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="POST Request" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="f8c17c88-45cd-4174-9d9a-4c8c2ea15ed4" name="AssignSlot">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="92eafef3-c8d8-49f0-81d0-bbce3f3f02e1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="001_Validation_MissingCarPlateNumber" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="001_Validation_MissingCarPlateNumber" id="418a53ba-7d7d-47b4-bf07-4947274a4077">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="001_Validation_MissingCarPlateNumber" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>false</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes'][0]</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>10001</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="365742be-56ae-4aa8-bb0b-512308340981" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="002_Validation_InvalidCarPlateNumber" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="002_Validation_InvalidCarPlateNumber" id="453fa50c-ca07-4912-b182-73b1eae69033">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="002_Validation_InvalidCarPlateNumber" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"&amp;6%4", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>false</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes'][0]</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>10003</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="6fc957f8-7833-46a2-a1a2-9d51a88ed881" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="003_Validation_MissingSlotType" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="003_Validation_MissingSlotType" id="25059292-1e01-4348-b45e-08f206d44600">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="003_Validation_MissingSlotType" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AB-333-MM"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>false</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes'][0]</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>10004</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="6db1b569-781b-478e-b7b7-bb3261e655ba" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="004_Success_Assign_with_available_Slots" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="004_Success_Assign_with_available_Slots" id="477c912d-1022-46fe-9ad1-3141544651da">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="004_Success_Assign_with_available_Slots" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-TEST1-CAR", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="8083c99c-7b40-4f67-a760-b1b1428ccddf" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="005_Success_Assign_already_assigned_car" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="" id="4b85ee28-eaeb-47ce-a35c-c9800968e407">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>slotId</con:name>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="005_assign_car" id="97582193-33f3-46cc-abab-2d986f25995b">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="005_assign_car" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-TEST1-CAR2", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="c6f8218d-0245-4909-bdfe-1225fa46ac43">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>id</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>005_assign_car</con:sourceStep>
+            <con:sourcePath>$['parkingSoltAssignment']['slot']['id']</con:sourcePath>
+            <con:targetType>slotId</con:targetType>
+            <con:targetStep>slotId</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="slotId" id="95b95264-bbf1-4ef7-aa6a-56cc6e68cf92">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>slotId</con:name>
+              <con:value>22</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="005_reassign_same_car" id="c9ee1aa6-75e0-43e7-80da-cf8b6646e4b1">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="005_reassign_same_car" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-TEST1-CAR2", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="60178ad6-d441-4b15-b777-c65ace78350e" name="JSONPath Match">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['id']</path>
+                <content>${#slotId}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="7a088c97-4698-4d3c-87ee-f516e050975a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="006_Failure_When_no_availability" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datasource" name="DataSource" id="cf672dcc-452a-4d9e-9141-be1e66c27b8d">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>20</generatedDataCount>
+              <generatorsTotalNumber>1</generatorsTotalNumber>
+              <lastSelectedProperty>0</lastSelectedProperty>
+              <GeneratorType0>INT</GeneratorType0>
+              <PropertyName0>carPlateNumber</PropertyName0>
+              <repetitionCountcarPlateNumber>0</repetitionCountcarPlateNumber>
+              <repeatValuescarPlateNumber>false</repeatValuescarPlateNumber>
+              <IntegerDataGeneratorMinValuecarPlateNumber>1</IntegerDataGeneratorMinValuecarPlateNumber>
+              <IntegerDataGeneratorMaxValuecarPlateNumber>100</IntegerDataGeneratorMaxValuecarPlateNumber>
+              <IntegerDataGeneratorStepValuecarPlateNumber>1</IntegerDataGeneratorStepValuecarPlateNumber>
+              <IntegerDataGeneratorConsequentValuescarPlateNumber>true</IntegerDataGeneratorConsequentValuescarPlateNumber>
+              <escapeSpaceSequence/>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>carPlateNumber</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="005_assign_car" id="571e48c7-2a84-44dc-84ae-fe8441a0d240">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="005_assign_car" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AB-${#carPlateNumber}", "slotType":"ELECTRIC_50KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_50KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="d2315dfb-03c5-4241-8c8b-a5db8bf21f59">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>005_assign_car</targetStep>
+          <discardResults>false</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Copy of 005_assign_car" id="51cd81cb-9353-4a53-94ba-6691471c9b75">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Copy of 005_assign_car" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AB-${#carPlateNumber}", "slotType":"ELECTRIC_50KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_50KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>cf672dcc-452a-4d9e-9141-be1e66c27b8d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>d2315dfb-03c5-4241-8c8b-a5db8bf21f59</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="9f69ffc9-655e-459f-9111-bcb1f4f3950d" name="ReleaseSlot">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="bb09041f-633b-4a36-a856-8701fd910ee1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="2001_Validation_MissingCarPlateNumber" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="2001_Validation_MissingCarPlateNumber" id="e822eba8-f8d8-458b-a632-1b5d415f22ad">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="2001_Validation_MissingCarPlateNumber" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="569a65fe-8d20-41d7-9781-243ef9ac3b6c" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>10001</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Missing plate number</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
+   <success>false</success>
+   <errorCodes>
+      <e>10001</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Missing plate number</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4148ee5b-c70d-4eaa-8632-785ace7ac577" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="2002_Validation_InvalidCarPlateNumber" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="2002_Validation_InvalidCarPlateNumber" id="00b9dd86-a10f-403a-8d87-be71d5597adb">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="2002_Validation_InvalidCarPlateNumber" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"@!S"}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="1cad1111-65b9-4e40-b5db-5332043533b2" name="Message Content Assertion 2">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>10003</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Invalid plate number</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
+   <success>false</success>
+   <errorCodes>
+      <e>10003</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Invalid plate number</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="e9b684ed-cf5d-4921-ae00-fad29fe2079a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="2003_KO_ReleaseSlotForUnknownCar" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="2003_KO_ReleaseSlotForUnknownCar" id="a2e1dc0b-f3ca-4885-9682-7e9d5d1a2bdd">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="2003_KO_ReleaseSlotForUnknownCar" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"XX-UNKNOWN-CAR"}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="6c919d98-ef3e-4fbb-9a48-5e23f0341ec6" name="Message Content Assertion 3">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30002</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>No active assignment for this car plate number</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
+   <success>false</success>
+   <errorCodes>
+      <e>30002</e>
+   </errorCodes>
+   <errorMessages>
+      <e>No active assignment for this car plate number</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="aa3c6d7e-a80a-4215-9a28-d6120e04aa67" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="2004_OK_ReleaseSlotForKnownCar" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="2004_Step1_AssignSlot" id="9c94c3bd-0dfa-4d41-aa86-6cb1da472da7">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="2004_Step1_AssignSlot" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="2004_Step2_ReleaseSlot" id="4cf9dcfa-7cdc-4e0d-92cb-09b8201b0d04">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="2004_Step2_ReleaseSlot" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR"}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="64c85ef6-b56f-44d0-b604-c83da72da7fd" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]</con:xpath>
+                  <con:element>errorCodes</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]</con:xpath>
+                  <con:element>errorMessages</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:slotNumber[1]</con:xpath>
+                  <con:element>slotNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>[A-Z][0-9]+</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:startDateTime[1]</con:xpath>
+                  <con:element>startDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:endDateTime[1]</con:xpath>
+                  <con:element>endDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:amount[1]</con:xpath>
+                  <con:element>amount</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:currencyCode[1]</con:xpath>
+                  <con:element>currencyCode</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>EUR</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:billNumber[1]</con:xpath>
+                  <con:element>billNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:carPlateNumber[1]</con:xpath>
+                  <con:element>carPlateNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>AA-2004-CAR</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:paymentStatus[1]</con:xpath>
+                  <con:element>paymentStatus</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>PENDING</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:prorated[1]</con:xpath>
+                  <con:element>prorated</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://localhost/slot/releaseSlot">
+   <success>true</success>
+   <errorCodes null="true"/>
+   <errorMessages null="true"/>
+   <slotNumber>B001</slotNumber>
+   <startDateTime>1566415017992</startDateTime>
+   <endDateTime>1566415018153</endDateTime>
+   <amount>2.0</amount>
+   <currencyCode>EUR</currencyCode>
+   <billNumber>3</billNumber>
+   <carPlateNumber>AA-2004-CAR</carPlateNumber>
+   <paymentStatus>PENDING</paymentStatus>
+   <prorated>true</prorated>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>9c94c3bd-0dfa-4d41-aa86-6cb1da472da7</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="ff0a9344-8d7b-4827-99c1-d2faf40f7463" name="Payment">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="6fe97d0a-93eb-45df-abe4-0635c645cd6d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3001_Validation_MIssingCreditCardObject" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3001_Validation_MIssingCreditCardObject" id="6be8498e-bb78-4132-94c4-43d2131615dd">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3001_Validation_MIssingCreditCardObject" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":1}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="a7f0e83e-3b74-44cd-bbe9-2ac199e5ef4f" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30008</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Missing Credit Card Object</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30008</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Missing Credit Card Object</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="e036d8fd-4d21-43a4-9295-b91f25b63a67" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3002_Validation_InvalidCreditCardNumber" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3002_Validation_InvalidCreditCardNumber" id="34e3f25c-dbd9-4af4-b051-a4e8ae9d9320">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3002_Validation_InvalidCreditCardNumber" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"15788","ccv":"123", "expirationDate":"01/23","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="93fd5fba-1a74-4544-8d8b-2365daca7bb4" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30007</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Invalid Credit Card number</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30007</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Invalid Credit Card number</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="b4a24e87-06ea-454d-990f-6d2d0b3d0f22" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3003_Validation_InvalidCreditCardCCV" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3003_Validation_InvalidCreditCardCCV" id="f511d597-0684-43c4-aacc-e09a8bd0b9d7">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3003_Validation_InvalidCreditCardCCV" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"13", "expirationDate":"01/23","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="15ac60b1-ecbf-4a5d-a79c-08e22874969f" name="Message Content Assertion 2">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30009</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Invalid Credit Card CCV</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30009</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Invalid Credit Card CCV</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="160ba2df-991f-482f-bc5a-3ecccca61b3f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3003_Validation_InvalidCreditCardOwnerName" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3003_Validation_InvalidCreditCardCCV" id="4f54d3e2-c897-4dbe-b254-3e0d37317430">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3003_Validation_InvalidCreditCardCCV" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/23"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="3cdf9b2f-6aa5-4960-8e3a-5f9919d1cbc1" name="Message Content Assertion 3">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30011</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Missing owner name</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30011</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Missing owner name</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="9de96103-1193-4c86-8b6e-1ab7aecaa9c7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3004_Validation_InvalidCreditCardExpirationDate" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3004_Validation_InvalidCreditCardExpirationDate" id="6bbd77f7-1f85-4390-aa95-5719f31f6c6d">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3004_Validation_InvalidCreditCardExpirationDate" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/18","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="502ac720-40b1-411d-87ef-1252581f7feb" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30010</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Invalid expiration date</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30010</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Invalid expiration date</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="5067a6be-420a-4893-8971-549cb1848e7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3006_Validation_UnknownBillId" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3006_Validation_UnknownBillId" id="cd316ad9-0983-4d08-a3cc-a3e64267695f">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3006_Validation_UnknownBillId" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/24","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="6825d26d-31f7-4db7-b02b-f41f0ac54937" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3007_OK_PaymentSucceeded" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="billId" id="a49eae4f-9d1a-4f6d-9b39-f7a35454fe3d">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>billId</con:name>
+              <con:value/>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3007_Step1_AssignSlot" id="a7a9f2b7-5515-4a3e-84df-a9775e5c7774">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3007_Step1_AssignSlot" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3007_Step2_ReleaseSlot" id="a284faab-0d39-4a3d-acca-ac4a95cb68c8">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3007_Step2_ReleaseSlot" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR"}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="64c85ef6-b56f-44d0-b604-c83da72da7fd" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]</con:xpath>
+                  <con:element>errorCodes</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]</con:xpath>
+                  <con:element>errorMessages</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:slotNumber[1]</con:xpath>
+                  <con:element>slotNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>[A-Z][0-9]+</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:startDateTime[1]</con:xpath>
+                  <con:element>startDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:endDateTime[1]</con:xpath>
+                  <con:element>endDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:amount[1]</con:xpath>
+                  <con:element>amount</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:currencyCode[1]</con:xpath>
+                  <con:element>currencyCode</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>EUR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:billNumber[1]</con:xpath>
+                  <con:element>billNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:carPlateNumber[1]</con:xpath>
+                  <con:element>carPlateNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>AA-2004-CAR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:paymentStatus[1]</con:xpath>
+                  <con:element>paymentStatus</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>PENDING</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:prorated[1]</con:xpath>
+                  <con:element>prorated</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://localhost/slot/releaseSlot">
+   <success>true</success>
+   <errorCodes null="true"/>
+   <errorMessages null="true"/>
+   <slotNumber>B001</slotNumber>
+   <startDateTime>1566415017992</startDateTime>
+   <endDateTime>1566415018153</endDateTime>
+   <amount>2.0</amount>
+   <currencyCode>EUR</currencyCode>
+   <billNumber>3</billNumber>
+   <carPlateNumber>AA-2004-CAR</carPlateNumber>
+   <paymentStatus>PENDING</paymentStatus>
+   <prorated>true</prorated>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="02b007b8-6262-40b5-8334-42ab5169ed08">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" entitize="false" transferChildNodes="false">
+            <con:name>billNumber</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>3007_Step2_ReleaseSlot</con:sourceStep>
+            <con:sourcePath>$['billNumber']</con:sourcePath>
+            <con:targetType>billNumber</con:targetType>
+            <con:targetStep>Properties 1</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="Properties 1" id="ad359a89-d2d2-49be-b05d-523cb6873469">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>billNumber</con:name>
+              <con:value>35</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3007_Step3_pay" id="d9efbcd3-bff1-4ce2-a07b-31f7460856bd">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3007_Step3_pay" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":${#billNumber},"creditCard":{"number":"1111111111111111","ccv":"132", "expirationDate":"01/24","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="1a5c6a3d-bccc-49c6-8c07-4262dbcbe4f0" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Response[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Response[1]/ns1:errorCodes[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Response[1]/ns1:transation[1]/ns1:transactionNumber[1]</con:xpath>
+                  <con:element>transactionNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Response[1]/ns1:transation[1]/ns1:status[1]</con:xpath>
+                  <con:element>status</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>SUCCESS</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Response[1]/ns1:transation[1]/ns1:date[1]</con:xpath>
+                  <con:element>date</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://localhost/billing/pay">
+   <success>true</success>
+   <errorCodes null="true"/>
+   <errorMessages null="true"/>
+   <transation>
+      <transactionNumber>1</transactionNumber>
+      <status>SUCCESS</status>
+      <date>1566419244014</date>
+   </transation>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a7a9f2b7-5515-4a3e-84df-a9775e5c7774</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a284faab-0d39-4a3d-acca-ac4a95cb68c8</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a49eae4f-9d1a-4f6d-9b39-f7a35454fe3d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>ad359a89-d2d2-49be-b05d-523cb6873469</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="3cc1257b-4550-4a43-adbb-09eb1a95bc8e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3008_KO_PaymentFailed" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="billId" id="9915ab21-3387-43b9-8717-a98f90cf5377">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>billId</con:name>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3008_Step1_AssignSlot" id="eed92d45-9b2a-47f7-8b68-8081df77cb62">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3008_Step1_AssignSlot" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR", "slotType":"ELECTRIC_20KW"}</con:request>
+            <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
+            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
+              <con:configuration>
+                <path>$['success']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>true</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
+              <con:configuration>
+                <path>$['errorCodes']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>null</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['number']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[A-Z][0-9]+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
+              <con:configuration>
+                <path>$['parkingSoltAssignment']['slot']['type']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>ELECTRIC_20KW</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3008_Step2_ReleaseSlot" id="c2019e51-2902-432b-ac2c-7fd2ccd9b91d">
+        <con:settings/>
+        <con:config service="REST Service 2" methodName="POST" resourcePath="/slot/releaseSlot" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3008_Step2_ReleaseSlot" id="f1d18bad-9b9d-4e8d-b0ae-e5bb25c34fff" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"carPlateNumber":"AA-2004-CAR"}</con:request>
+            <con:originalUri>http://localhost/slot/releaseSlot</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="64c85ef6-b56f-44d0-b604-c83da72da7fd" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]</con:xpath>
+                  <con:element>errorCodes</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorCodes[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]</con:xpath>
+                  <con:element>errorMessages</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:errorMessages[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:slotNumber[1]</con:xpath>
+                  <con:element>slotNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>regex</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>[A-Z][0-9]+</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:startDateTime[1]</con:xpath>
+                  <con:element>startDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:endDateTime[1]</con:xpath>
+                  <con:element>endDateTime</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:amount[1]</con:xpath>
+                  <con:element>amount</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:currencyCode[1]</con:xpath>
+                  <con:element>currencyCode</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>EUR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:billNumber[1]</con:xpath>
+                  <con:element>billNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>&lt;</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:carPlateNumber[1]</con:xpath>
+                  <con:element>carPlateNumber</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>AA-2004-CAR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:paymentStatus[1]</con:xpath>
+                  <con:element>paymentStatus</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>PENDING</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
+//ns1:Response[1]/ns1:prorated[1]</con:xpath>
+                  <con:element>prorated</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://localhost/slot/releaseSlot">
+   <success>true</success>
+   <errorCodes null="true"/>
+   <errorMessages null="true"/>
+   <slotNumber>B001</slotNumber>
+   <startDateTime>1566415017992</startDateTime>
+   <endDateTime>1566415018153</endDateTime>
+   <amount>2.0</amount>
+   <currencyCode>EUR</currencyCode>
+   <billNumber>3</billNumber>
+   <carPlateNumber>AA-2004-CAR</carPlateNumber>
+   <paymentStatus>PENDING</paymentStatus>
+   <prorated>true</prorated>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="d8862396-0101-4b0f-a664-bf7805e2abe0">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" entitize="false" transferChildNodes="false">
+            <con:name>billNumber</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>3008_Step2_ReleaseSlot</con:sourceStep>
+            <con:sourcePath>$['billNumber']</con:sourcePath>
+            <con:targetType>billNumber</con:targetType>
+            <con:targetStep>Properties 1</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="Properties 1" id="78168553-f02b-42d1-ad07-ef6b459f30ab">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>billNumber</con:name>
+              <con:value>39</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="3008_Step3_pay" id="82067ac7-07d3-4861-bb24-90472f5f3e0e">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3008_Step3_pay" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":${#billNumber},"creditCard":{"number":"0000000000000000","ccv":"132", "expirationDate":"01/24","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="7bb5516d-682e-432c-a97d-f8b68e5f3847" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30004</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>Transaction failed</e>
+   </errorCodes>
+   <errorMessages>
+      <e>30004</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a7a9f2b7-5515-4a3e-84df-a9775e5c7774</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a284faab-0d39-4a3d-acca-ac4a95cb68c8</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>a49eae4f-9d1a-4f6d-9b39-f7a35454fe3d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>ad359a89-d2d2-49be-b05d-523cb6873469</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

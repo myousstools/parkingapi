@@ -1,0 +1,59 @@
+/**
+* Parking's fare Drools rules configuration file,
+* Possible improvment:
+* - store the rules in the data base to be able to update
+* them at runtime by admin.
+* - store the prices in the data base and manage them at runtime by admin.
+*/
+package com.parking.manager.rules
+import com.parking.manager.dao.entity.Fare;
+import com.parking.manager.web.beans.SlotType;
+dialect  "mvel"
+/*
+* Rule 1 :
+* Condition: car type is SEDAN
+* Result:
+*    - No fixed amout
+*    - 2 EUR/USD per hour
+*    - no prorata calculation mode
+*/
+rule "Calculate Parking fare - Scenario 1 - SEDAN"
+    when
+        fare:Fare(parkingSlot.getType() == SlotType.SEDAN);
+    then
+        fare.setFixedAmount(0.0F);
+        fare.setHourPrice(2.0F);
+        fare.setProrated(false);
+end
+/*
+* Rule 2 :
+* Condition: car type is ELECTRIC_20KW
+* Result:
+*    - fixed amout: 2 EUR/USD
+*    - 5 EUR/USD per hour
+*    - prorata calculation mode
+*/
+rule "Calculate Parking fare - Scenario 2 - ELECTRIC_20KW"
+    when
+         fare:Fare(parkingSlot.getType() == SlotType.ELECTRIC_20KW);
+    then
+        fare.setFixedAmount(2.0F);
+        fare.setHourPrice(5.0F);
+        fare.setProrated(true);
+end
+/*
+* Rule 2 :
+* Condition: car type is ELECTRIC_50KW
+* Result:
+*    - fixed amout: 2 EUR/USD
+*    - 12.5 EUR/USD per hour.
+*    - prorata calculation mode
+*/
+rule "Calculate Parking fare - Scenario 3 - ELECTRIC_50KW"
+    when
+         fare:Fare(parkingSlot.getType() == SlotType.ELECTRIC_50KW);
+    then
+        fare.setFixedAmount(2.0F);
+        fare.setHourPrice(12.5F);
+        fare.setProrated(true);
+end
