@@ -13,8 +13,6 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.parking.manager.web.beans.validation.ValidCarPlateNumberConstraint;
-
 /**
  * The interface Valid car plate number.
  */

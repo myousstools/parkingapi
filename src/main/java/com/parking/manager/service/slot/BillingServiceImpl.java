@@ -76,9 +76,8 @@ public class BillingServiceImpl implements IBillingService {
 
   @Override
   public Bill getBill(Long id) throws ParkingFunctionalException {
-    Bill bill = billDAO.findById(id).orElseThrow(
+    return billDAO.findById(id).orElseThrow(
         () -> Errors.getFunctionalExceptionFromErrorCode(Errors.RESOURCE_NOT_FOUND_ERROR_CODE));
-    return bill;
   }
 
   @Override

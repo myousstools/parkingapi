@@ -103,11 +103,10 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     output.setErrorMessages(errorMessages);
     return new ResponseEntity<>(output, new HttpHeaders(), HttpStatus.BAD_REQUEST);
   }
+
   @ExceptionHandler({ MethodArgumentTypeMismatchException.class })
   public ResponseEntity<Object> handleMethodArgumentTypeMismatch(
       MethodArgumentTypeMismatchException ex, WebRequest request) {
-    String error =
-        ex.getName() + " should be of type " + ex.getRequiredType().getName();
     List<String> errorCodes = new ArrayList<>();
     List<String> errorMessages = new ArrayList<>();
     ErrorOutput output = new ErrorOutput();

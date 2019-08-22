@@ -1,6 +1,5 @@
 package com.parking.manager.web.beans;
 
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import com.parking.manager.web.beans.validation.ValidCarPlateNumber;

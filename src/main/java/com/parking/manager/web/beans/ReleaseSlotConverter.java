@@ -5,7 +5,10 @@ import com.parking.manager.dao.entity.Bill;
 /**
  * The type Release slot converter.
  */
-public class ReleaseSlotConverter {
+public final class ReleaseSlotConverter {
+
+  private ReleaseSlotConverter(){}
+
   /**
    * Convert bill entity to a release slot output object.
    *

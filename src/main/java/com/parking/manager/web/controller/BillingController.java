@@ -5,10 +5,11 @@ import javax.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.parking.manager.dao.entity.Bill;
@@ -25,13 +26,12 @@ import io.swagger.annotations.Api;
 @RestController
 @RequestMapping(value = "/billing", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces =
     { MediaType.APPLICATION_JSON_VALUE })
-@Api(value = "Billing REST API", description = "Billing API",
-    produces = "application/json")
+@Api(value = "Billing REST API", produces = MediaType.APPLICATION_JSON_VALUE)
 public class BillingController {
   @Autowired
   IBillingService billingService;
 
-  @RequestMapping(value = "/bill/{id}", method = RequestMethod.GET)
+  @GetMapping(value = "/bill/{id}")
   public GetBillOutput getBill(@PathVariable(value = "id") Long id) throws ParkingFunctionalException {
     Bill bill = billingService.getBill(id);
     GetBillOutput result = GetBillOutputConverter.convert(bill);
@@ -39,7 +39,7 @@ public class BillingController {
     return result;
   }
 
-  @RequestMapping(value = "/pay", method = RequestMethod.POST)
+  @PostMapping(value = "/pay")
   public PaymentOutput submitPayment(@RequestBody @Valid PaymentInput paymentInput) throws ParkingFunctionalException {
     PaymentTransaction transaction = billingService.payBill(paymentInput);
     PaymentOutput paymentOutput = new PaymentOutput();

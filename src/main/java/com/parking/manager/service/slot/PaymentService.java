@@ -17,8 +17,8 @@ import com.parking.manager.web.beans.CreditCard;
 @Service
 @Transactional
 public class PaymentService implements IPaymentService {
-  private static Long TRANSACTION_NUMBER_GENERATOR = 0L;
-
+  private static long TRANSACTION_NUMBER_GENERATOR = 0L;
+//TODO
   @Override
   public PaymentTransaction submitPayment(CreditCard creditCard, float amount, String currency) {
     //Mocked service

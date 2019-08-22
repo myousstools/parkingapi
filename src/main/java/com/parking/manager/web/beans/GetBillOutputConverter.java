@@ -5,7 +5,10 @@ import com.parking.manager.dao.entity.Bill;
 /**
  * The type Get bill output converter.
  */
-public class GetBillOutputConverter {
+public final class GetBillOutputConverter {
+  private GetBillOutputConverter() {
+  }
+
   /**
    * Convert get bill output.
    *

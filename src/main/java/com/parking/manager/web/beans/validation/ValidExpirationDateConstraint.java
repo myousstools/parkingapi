@@ -12,9 +12,12 @@ import org.joda.time.format.DateTimeFormat;
 public class ValidExpirationDateConstraint implements ConstraintValidator<ValidExpirationDate, String> {
   private static final String DATE_FORMAT = "dd/yy";
 
+  @Override
   public void initialize(ValidExpirationDate constraint) {
+    //no initialisation needed
   }
 
+  @Override
   public boolean isValid(String dateString, ConstraintValidatorContext context) {
     if (dateString == null) {
       return true;

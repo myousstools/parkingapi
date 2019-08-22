@@ -8,7 +8,9 @@ import com.parking.manager.service.exception.ParkingFunctionalException;
 /**
  * The type Errors.
  */
-public class Errors {
+public final class Errors {
+  private Errors() {
+  }
 
   /**
    * The constant MISSING_PLATENUMBER_ERROR_CODE.
@@ -53,9 +55,9 @@ public class Errors {
   public static final String MISSING_CREDIT_CARD_OWNER_ERROR_CODE = "30011";
   public static final String INVALID_CREDIT_CARD_OWNER_ERROR_CODE = "30012";
   public static final String INVALID_TYPE_ERROR_CODE = "30013";
-  public static final String MISSING_CREADIT_CARD_OBJECT_ERROR_CODE = "30008";
+  public static final String MISSING_CREDIT_CARD_OBJECT_ERROR_CODE = "30014";
 
-  private final static Map<String, String> ERROR_MESSAGES_MAP = new HashMap<>();
+  private static final Map<String, String> ERROR_MESSAGES_MAP = new HashMap<>();
 
   static {
 
@@ -78,7 +80,7 @@ public class Errors {
     ERROR_MESSAGES_MAP.put(MISSING_CREDIT_CARD_OWNER_ERROR_CODE, "Missing owner name");
     ERROR_MESSAGES_MAP.put(INVALID_CREDIT_CARD_OWNER_ERROR_CODE, "Invalid owner name");
     ERROR_MESSAGES_MAP.put(INVALID_TYPE_ERROR_CODE, "Invalid input type");
-    ERROR_MESSAGES_MAP.put(MISSING_CREADIT_CARD_OBJECT_ERROR_CODE, "Missing Credit Card Object");
+    ERROR_MESSAGES_MAP.put(MISSING_CREDIT_CARD_OBJECT_ERROR_CODE, "Missing Credit Card Object");
 
   }
 

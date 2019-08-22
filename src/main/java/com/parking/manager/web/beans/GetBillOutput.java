@@ -1,11 +1,6 @@
 package com.parking.manager.web.beans;
 
-import java.util.Date;
-
-import com.parking.manager.dao.entity.PaymentStatus;
-
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 @ApiModel()
 public class GetBillOutput extends AbstractResponse {
   private BillOutput bill;

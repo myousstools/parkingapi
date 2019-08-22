@@ -32,8 +32,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 @RequestMapping(value = "/slot", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces =
     { MediaType.APPLICATION_JSON_VALUE })
-@Api(value = "Parking manager REST API", description = "Slot API",
-    produces = "application/json")
+@Api(value = "Parking manager REST API", produces = MediaType.APPLICATION_JSON_VALUE)
 public class SlotController {
   /**
    * The Assign ment service.
