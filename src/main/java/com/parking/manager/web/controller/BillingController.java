@@ -31,14 +31,6 @@ public class BillingController {
   @Autowired
   IBillingService billingService;
 
-  @GetMapping(value = "/bill/{id}")
-  public GetBillOutput getBill(@PathVariable(value = "id") Long id) throws ParkingFunctionalException {
-    Bill bill = billingService.getBill(id);
-    GetBillOutput result = GetBillOutputConverter.convert(bill);
-    result.setSuccess(true);
-    return result;
-  }
-
   @PostMapping(value = "/pay")
   public PaymentOutput submitPayment(@RequestBody @Valid PaymentInput paymentInput) throws ParkingFunctionalException {
     PaymentTransaction transaction = billingService.payBill(paymentInput);
@@ -49,5 +41,13 @@ public class BillingController {
     paymentOutput.setTransation(transactionBean);
     paymentOutput.setSuccess(true);
     return paymentOutput;
+  }
+
+  @GetMapping(value = "/bill/{id}")
+  public GetBillOutput getBill(@PathVariable(value = "id") Long id) throws ParkingFunctionalException {
+    Bill bill = billingService.getBill(id);
+    GetBillOutput result = GetBillOutputConverter.convert(bill);
+    result.setSuccess(true);
+    return result;
   }
 }

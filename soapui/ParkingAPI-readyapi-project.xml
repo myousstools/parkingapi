@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="e0bb945b-cd7b-4758-a0d0-805b2b6f2568" created="2.8.0" activeEnvironment="Default environment" name="ParkingAPI" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="e0bb945b-cd7b-4758-a0d0-805b2b6f2568" created="2.8.0" activeEnvironment="Default environment" name="ParkingAPI" resourceRoot="" updated="2.8.0 2019-07-23T17:43:45Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="2af8a264-2f00-4906-85e6-56825e658227" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -35,9 +35,19 @@
           <con:params/>
           <con:element xmlns:ass="http://localhost/slot/assignSlot">ass:Response</con:element>
         </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
         <con:request name="POST Request" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -83,6 +93,7 @@
             <con:endpoint>http://localhost:8585</con:endpoint>
             <con:request/>
             <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -127,6 +138,10 @@
         <con:request name="POST Request" id="bf378f67-8b81-4310-bc30-df69cc93c1ff" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -167,6 +182,10 @@
         <con:request name="POST Request" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json">
           <con:settings/>
           <con:endpoint>http://localhost:8585</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
           <con:parameters/>
         </con:request>
       </con:method>
@@ -575,35 +594,9 @@
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
-    <con:testCase id="7a088c97-4698-4d3c-87ee-f516e050975a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="006_Failure_When_no_availability" searchProperties="true" timeout="0">
+    <con:testCase id="7a088c97-4698-4d3c-87ee-f516e050975a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="006_Failure_When_no_availability" searchProperties="true" timeout="0" disabled="true">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="datasource" name="DataSource" id="cf672dcc-452a-4d9e-9141-be1e66c27b8d">
-        <con:settings/>
-        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:dataSource type="Data Generator">
-            <con:configuration>
-              <generatedDataCount>20</generatedDataCount>
-              <generatorsTotalNumber>1</generatorsTotalNumber>
-              <lastSelectedProperty>0</lastSelectedProperty>
-              <GeneratorType0>INT</GeneratorType0>
-              <PropertyName0>carPlateNumber</PropertyName0>
-              <repetitionCountcarPlateNumber>0</repetitionCountcarPlateNumber>
-              <repeatValuescarPlateNumber>false</repeatValuescarPlateNumber>
-              <IntegerDataGeneratorMinValuecarPlateNumber>1</IntegerDataGeneratorMinValuecarPlateNumber>
-              <IntegerDataGeneratorMaxValuecarPlateNumber>100</IntegerDataGeneratorMaxValuecarPlateNumber>
-              <IntegerDataGeneratorStepValuecarPlateNumber>1</IntegerDataGeneratorStepValuecarPlateNumber>
-              <IntegerDataGeneratorConsequentValuescarPlateNumber>true</IntegerDataGeneratorConsequentValuescarPlateNumber>
-              <escapeSpaceSequence/>
-            </con:configuration>
-          </con:dataSource>
-          <con:shared>false</con:shared>
-          <con:restartShared>false</con:restartShared>
-          <con:property>carPlateNumber</con:property>
-          <con:completeLastOperation>true</con:completeLastOperation>
-          <con:restartOnRun>true</con:restartOnRun>
-        </con:config>
-      </con:testStep>
       <con:testStep type="restrequest" name="005_assign_car" id="571e48c7-2a84-44dc-84ae-fe8441a0d240">
         <con:settings/>
         <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -612,58 +605,8 @@
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:endpoint>http://localhost:8585</con:endpoint>
-            <con:request>{"carPlateNumber":"AB-${#carPlateNumber}", "slotType":"ELECTRIC_50KW"}</con:request>
+            <con:request>{"carPlateNumber":"AB-${#TestCase#counter}", "slotType":"ELECTRIC_50KW"}</con:request>
             <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
-            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
-              <con:configuration>
-                <path>$['success']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>true</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
-              <con:configuration>
-                <path>$['errorCodes']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>null</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['id']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>[0-9]+</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['slot']['number']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>[A-Z][0-9]+</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['slot']['type']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>ELECTRIC_50KW</regEx>
-              </con:configuration>
-            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -673,74 +616,36 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="datasourceloop" name="DataSource Loop" id="d2315dfb-03c5-4241-8c8b-a5db8bf21f59">
+      <con:testStep type="groovy" name="Groovy Script" id="700cd5ff-5ce1-4cda-a4bb-4a89a0236eed">
         <con:settings/>
         <con:config>
-          <dataSourceStep>DataSource</dataSourceStep>
-          <targetStep>005_assign_car</targetStep>
-          <discardResults>false</discardResults>
+          <script>import static com.jayway.jsonpath.JsonPath.parse
+
+def response = context.expand( '${Response}' )
+log.info response
+def success = parse(response).read('$.success')
+log.info success
+// read the property as a string
+def counter = testRunner.testCase.getPropertyValue("counter")
+log.info counter
+// convert it to an Integer, and increment
+def counterInc  = counter.toInteger() + 1
+// set the property back as string
+testRunner.testCase.setPropertyValue("counter", counterInc.toString())
+
+if (success) testRunner.gotoStep(1)//ByName("005_assign_car")</script>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="Copy of 005_assign_car" id="51cd81cb-9353-4a53-94ba-6691471c9b75">
+      <con:testStep type="restrequest" name="005_assign_car_no_more-availability" id="51cd81cb-9353-4a53-94ba-6691471c9b75">
         <con:settings/>
         <con:config service="REST Service 1" resourcePath="/slot/assignSlot" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Copy of 005_assign_car" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
+          <con:restRequest name="005_assign_car_no_more-availability" id="31eb9bb3-1236-4e93-92e7-4e840b85e618" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:endpoint>http://localhost:8585</con:endpoint>
-            <con:request>{"carPlateNumber":"AB-${#carPlateNumber}", "slotType":"ELECTRIC_50KW"}</con:request>
+            <con:request>{"carPlateNumber":"AB-1233", "slotType":"ELECTRIC_50KW"}</con:request>
             <con:originalUri>http://localhost/slot/assignSlot</con:originalUri>
-            <con:assertion type="JsonPath RegEx Match" id="638af647-2338-477f-9f96-f35820911b25" name="Match content of [success] using RegEx">
-              <con:configuration>
-                <path>$['success']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>true</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="355ddd59-21bf-4f67-8cb8-98a17e477f0c" name="Match content of [0] using RegEx">
-              <con:configuration>
-                <path>$['errorCodes']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>null</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="b97e3131-54f7-4874-90f9-da34e946b7ed" name="Match content of [id] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['id']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>[0-9]+</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="a8137273-7406-427d-8416-7bbb3f933441" name="Match content of [number] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['slot']['number']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>[A-Z][0-9]+</regEx>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="JsonPath RegEx Match" id="47cd82a4-c8fa-4b37-9cc6-cd5cfac6c7e5" name="Match content of [type] using RegEx">
-              <con:configuration>
-                <path>$['parkingSoltAssignment']['slot']['type']</path>
-                <content>true</content>
-                <allowWildcards>false</allowWildcards>
-                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
-                <ignoreComments>false</ignoreComments>
-                <regEx>ELECTRIC_50KW</regEx>
-              </con:configuration>
-            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -750,15 +655,15 @@
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:properties/>
+      <con:properties>
+        <con:property>
+          <con:name>counter</con:name>
+          <con:value>136992</con:value>
+        </con:property>
+      </con:properties>
       <con:reportParameters/>
       <con:breakPoints>
-        <con:testStepId>cf672dcc-452a-4d9e-9141-be1e66c27b8d</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>d2315dfb-03c5-4241-8c8b-a5db8bf21f59</con:testStepId>
+        <con:testStepId>700cd5ff-5ce1-4cda-a4bb-4a89a0236eed</con:testStepId>
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
@@ -794,6 +699,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -804,6 +710,7 @@
                   <con:operator>regex</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>10001</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -814,6 +721,7 @@
                   <con:operator>exists</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>Missing plate number</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
@@ -863,6 +771,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -873,6 +782,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>10003</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -883,6 +793,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>Invalid plate number</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
@@ -932,6 +843,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -942,6 +854,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>30002</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -952,6 +865,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>No active assignment for this car plate number</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/slot/releaseSlot">
@@ -1070,6 +984,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1079,6 +994,8 @@
                   <con:type xsi:nil="true"/>
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1089,6 +1006,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1098,6 +1016,8 @@
                   <con:type xsi:nil="true"/>
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
+                  <con:expectedValue xsi:nil="true"/>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1108,6 +1028,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1118,6 +1039,7 @@
                   <con:operator>regex</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>[A-Z][0-9]+</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1128,6 +1050,7 @@
                   <con:operator>&lt;</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>true</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1138,7 +1061,8 @@
                   <con:operator>&lt;</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>0</con:expectedValue>
-                  <con:numberType>false</con:numberType>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>true</con:numberType>
                 </con:elements>
                 <con:elements>
                   <con:xpath>declare namespace ns1='http://localhost/slot/releaseSlot';
@@ -1148,6 +1072,7 @@
                   <con:operator>&lt;</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>true</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1158,6 +1083,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>EUR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1168,6 +1094,7 @@
                   <con:operator>&lt;</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>0</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>true</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1178,6 +1105,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>AA-2004-CAR</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1188,6 +1116,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>PENDING</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1198,6 +1127,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>true</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Response xmlns="http://localhost/slot/releaseSlot">
@@ -1263,6 +1193,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1273,6 +1204,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>30008</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1283,6 +1215,7 @@
                   <con:operator>exists</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>Missing Credit Card Object</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
@@ -1331,6 +1264,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1341,6 +1275,7 @@
                   <con:operator>regex</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>30007</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1351,6 +1286,7 @@
                   <con:operator>exists</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>Invalid Credit Card number</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
@@ -1399,6 +1335,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1409,6 +1346,7 @@
                   <con:operator>regex</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>30009</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -1419,6 +1357,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>Invalid Credit Card CCV</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
@@ -1432,167 +1371,6 @@
 </Fault>]]></con:originalMessage>
               </con:configuration>
             </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-    </con:testCase>
-    <con:testCase id="160ba2df-991f-482f-bc5a-3ecccca61b3f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3003_Validation_InvalidCreditCardOwnerName" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="3003_Validation_InvalidCreditCardCCV" id="4f54d3e2-c897-4dbe-b254-3e0d37317430">
-        <con:settings/>
-        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="3003_Validation_InvalidCreditCardCCV" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>http://localhost:8585</con:endpoint>
-            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/23"}}</con:request>
-            <con:originalUri>http://localhost/billing/pay</con:originalUri>
-            <con:assertion type="MessageContentAssertion" id="3cdf9b2f-6aa5-4960-8e3a-5f9919d1cbc1" name="Message Content Assertion 3">
-              <con:configuration xsi:type="con:MessageContentAssertion">
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:success[1]</con:xpath>
-                  <con:element>success</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>=</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>false</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
-                  <con:element>e</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>=</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>30011</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
-                  <con:element>e</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>=</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>Missing owner name</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
-   <success>false</success>
-   <errorCodes>
-      <e>30011</e>
-   </errorCodes>
-   <errorMessages>
-      <e>Missing owner name</e>
-   </errorMessages>
-</Fault>]]></con:originalMessage>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-    </con:testCase>
-    <con:testCase id="9de96103-1193-4c86-8b6e-1ab7aecaa9c7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3004_Validation_InvalidCreditCardExpirationDate" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="3004_Validation_InvalidCreditCardExpirationDate" id="6bbd77f7-1f85-4390-aa95-5719f31f6c6d">
-        <con:settings/>
-        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="3004_Validation_InvalidCreditCardExpirationDate" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>http://localhost:8585</con:endpoint>
-            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/18","ownerName":"John"}}</con:request>
-            <con:originalUri>http://localhost/billing/pay</con:originalUri>
-            <con:assertion type="MessageContentAssertion" id="502ac720-40b1-411d-87ef-1252581f7feb" name="Message Content Assertion">
-              <con:configuration xsi:type="con:MessageContentAssertion">
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:success[1]</con:xpath>
-                  <con:element>success</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>=</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>false</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
-                  <con:element>e</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>=</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>30010</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:elements>
-                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
-//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
-                  <con:element>e</con:element>
-                  <con:type xsi:nil="true"/>
-                  <con:operator>exists</con:operator>
-                  <con:enabled>true</con:enabled>
-                  <con:expectedValue>Invalid expiration date</con:expectedValue>
-                  <con:numberType>false</con:numberType>
-                </con:elements>
-                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
-   <success>false</success>
-   <errorCodes>
-      <e>30010</e>
-   </errorCodes>
-   <errorMessages>
-      <e>Invalid expiration date</e>
-   </errorMessages>
-</Fault>]]></con:originalMessage>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters/>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-    </con:testCase>
-    <con:testCase id="5067a6be-420a-4893-8971-549cb1848e7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3006_Validation_UnknownBillId" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="3006_Validation_UnknownBillId" id="cd316ad9-0983-4d08-a3cc-a3e64267695f">
-        <con:settings/>
-        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="3006_Validation_UnknownBillId" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>http://localhost:8585</con:endpoint>
-            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/24","ownerName":"John"}}</con:request>
-            <con:originalUri>http://localhost/billing/pay</con:originalUri>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -1902,7 +1680,7 @@
           <con:properties>
             <con:property>
               <con:name>billNumber</con:name>
-              <con:value>35</con:value>
+              <con:value>8</con:value>
             </con:property>
           </con:properties>
         </con:config>
@@ -1946,7 +1724,7 @@
 //ns1:Response[1]/ns1:transation[1]/ns1:transactionNumber[1]</con:xpath>
                   <con:element>transactionNumber</con:element>
                   <con:type xsi:nil="true"/>
-                  <con:operator>&lt;</con:operator>
+                  <con:operator>&lt;=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>0</con:expectedValue>
                   <con:hasValue>false</con:hasValue>
@@ -2017,6 +1795,173 @@
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="160ba2df-991f-482f-bc5a-3ecccca61b3f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3003_Validation_InvalidCreditCardOwnerName" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3003_Validation_InvalidCreditCardCCV" id="4f54d3e2-c897-4dbe-b254-3e0d37317430">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3003_Validation_InvalidCreditCardCCV" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/23"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="3cdf9b2f-6aa5-4960-8e3a-5f9919d1cbc1" name="Message Content Assertion 3">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30011</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Missing owner name</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30011</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Missing owner name</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="9de96103-1193-4c86-8b6e-1ab7aecaa9c7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3004_Validation_InvalidCreditCardExpirationDate" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3004_Validation_InvalidCreditCardExpirationDate" id="6bbd77f7-1f85-4390-aa95-5719f31f6c6d">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3004_Validation_InvalidCreditCardExpirationDate" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/18","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="502ac720-40b1-411d-87ef-1252581f7feb" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:success[1]</con:xpath>
+                  <con:element>success</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorCodes[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>30010</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/billing/pay';
+//ns1:Fault[1]/ns1:errorMessages[1]/ns1:e[1]</con:xpath>
+                  <con:element>e</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Invalid expiration date</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
+   <success>false</success>
+   <errorCodes>
+      <e>30010</e>
+   </errorCodes>
+   <errorMessages>
+      <e>Invalid expiration date</e>
+   </errorMessages>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="5067a6be-420a-4893-8971-549cb1848e7b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3006_Validation_UnknownBillId" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="3006_Validation_UnknownBillId" id="cd316ad9-0983-4d08-a3cc-a3e64267695f">
+        <con:settings/>
+        <con:config service="REST Service 3" resourcePath="/billing/pay" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="3006_Validation_UnknownBillId" id="9dfd8321-4605-4724-83fa-637294e7edf1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8585</con:endpoint>
+            <con:request>{"billId":3,"creditCard":{"number":"123456789123456789","ccv":"132", "expirationDate":"01/24","ownerName":"John"}}</con:request>
+            <con:originalUri>http://localhost/billing/pay</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
     </con:testCase>
     <con:testCase id="3cc1257b-4550-4a43-adbb-09eb1a95bc8e" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3008_KO_PaymentFailed" searchProperties="true" timeout="0">
       <con:settings/>
@@ -2314,7 +2259,7 @@
           <con:properties>
             <con:property>
               <con:name>billNumber</con:name>
-              <con:value>39</con:value>
+              <con:value>12</con:value>
             </con:property>
           </con:properties>
         </con:config>
@@ -2339,6 +2284,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>30004</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:elements>
@@ -2349,6 +2295,7 @@
                   <con:operator>=</con:operator>
                   <con:enabled>true</con:enabled>
                   <con:expectedValue>false</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
                   <con:numberType>false</con:numberType>
                 </con:elements>
                 <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/billing/pay">
@@ -2399,7 +2346,12 @@
   </con:testSuite>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>counter</con:name>
+      <con:value>1</con:value>
+    </con:property>
+  </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
